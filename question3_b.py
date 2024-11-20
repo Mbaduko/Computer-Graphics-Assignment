@@ -1,0 +1,70 @@
+import turtle
+screen = turtle.Screen()
+screen.bgcolor("white") 
+screen.title("Marie Claire UWIRINGIYIMANA")
+
+
+pen = turtle.Turtle()
+pen.speed(1)  
+
+pen.penup()
+pen.goto(-200, 100)  
+pen.pendown()
+pen.color("blue")  
+pen.begin_fill()
+pen.fillcolor("green")  
+for _ in range(2):
+    pen.forward(400)  
+    pen.right(90)
+    pen.forward(200)  
+    pen.right(90)
+pen.end_fill()
+
+
+center_x = 10
+center_y = 50  
+pen.penup()
+pen.goto(center_x - 120, center_y - 85) 
+pen.pendown()
+pen.color("blue")  
+pen.begin_fill()
+pen.fillcolor("red")  
+pen.circle(50)  
+pen.end_fill()
+pen.penup()
+pen.goto(center_x - 120, center_y - 50)  
+pen.pendown()
+pen.color("white")  
+pen.write("CST", align="center", font=("Arial", 16, "bold"))
+
+pen.penup()
+pen.goto(center_x, center_y - 85)  
+pen.pendown()
+pen.color("blue") 
+pen.begin_fill()
+pen.fillcolor("sky blue")  
+pen.circle(50) 
+pen.end_fill()
+pen.penup()
+pen.goto(center_x, center_y - 50)
+pen.pendown()
+pen.color("white") 
+pen.write("soICT", align="center", font=("Arial", 16, "bold"))
+
+
+pen.penup()
+pen.goto(center_x + 120, center_y - 85)  
+pen.pendown()
+pen.color("blue")  
+pen.begin_fill()
+pen.fillcolor("yellow") 
+pen.circle(50) 
+pen.end_fill()
+pen.penup()
+pen.goto(center_x + 120, center_y - 50)  
+pen.pendown()
+pen.color("white")  
+pen.write("CS", align="center", font=("Arial", 16, "bold"))
+
+pen.hideturtle()
+turtle.done()
