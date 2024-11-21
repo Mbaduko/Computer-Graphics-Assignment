@@ -27,7 +27,7 @@ public class BresenhamCircle extends JPanel {
             }
         }
     }
-
+    
     private void drawCirclePoints(int centerX, int centerY, int x, int y, Graphics g) {
         g.fillRect(centerX + x, centerY + y, 1, 1);
         g.fillRect(centerX - x, centerY + y, 1, 1);
@@ -37,9 +37,7 @@ public class BresenhamCircle extends JPanel {
         g.fillRect(centerX - y, centerY + x, 1, 1);
         g.fillRect(centerX + y, centerY - x, 1, 1);
         g.fillRect(centerX - y, centerY - x, 1, 1);
-    }
-
-    public static void main(String[] args) {
+    }    public static void main(String[] args) {
         JFrame frame = new JFrame();
         frame.add(new BresenhamCircle());
         frame.setSize(400, 400);

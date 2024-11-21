@@ -2,16 +2,13 @@ import turtle
 
 # Set up the screen
 screen = turtle.Screen()
-# screen.title("Group 9")  # Commented out because it's not supported in some environments
+
 screen.setup(width=600, height=300)
-screen.bgcolor("blue")  # Set the background color to blue
-
-# Create a turtle for drawing
+screen.bgcolor("blue")  
 t = turtle.Turtle()
-t.hideturtle()  # Hide the turtle for static drawing
-t.speed(0)      # Set the fastest drawing speed
+t.hideturtle()  
+t.speed(0)      
 
-# Draw a blue rectangle (background already blue, so this is optional)
 t.penup()
 t.goto(-300, 150)  # Start at top left
 t.pendown()
@@ -24,11 +21,10 @@ for _ in range(2):
     t.right(90)
 t.end_fill()
 
-# Draw "Hello" in the center of the screen
 t.penup()
 t.goto(0, 0)  # Move to center
-t.color("white")  # Set the text color to white
-t.write("Welcome to  UR CST", align="center", font=("Arial", 24, "bold"))  # Write the word "Hello"
+t.color("white")  
+t.write("Welcome to  UR CST", align="center", font=("Arial", 24, "bold"))  
 
 # Finish the drawing
 turtle.done()

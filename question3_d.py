@@ -1,67 +1,44 @@
 import turtle
 
 def setup_turtle():
-    """
-    Initialize and configure the turtle
-    """
     screen = turtle.Screen()
     screen.bgcolor("white")
-    screen.title("Octagonal Spiral")
-
+    screen.title("Octagonal Spiral Group 7")
     t = turtle.Turtle()
-    t.speed(1)  # Fastest speed
+    t.speed(1)  
     t.hideturtle()
     return t, screen
 
 def draw_spiral():
-    """
-    Draw an octagonal spiral starting horizontally and ending at the top
-    """
     t, screen = setup_turtle()
-
-    # Colors for the spiral
     colors = ["yellow", "blue", "red", "purple", "orange", "green"]
     color_index = 0
 
-    # Spiral parameters
     segments_per_cycle = 8
     complete_cycles = 4
     extra_segments = 5
     total_segments = (complete_cycles * segments_per_cycle) + extra_segments
 
-    # Starting parameters
-    start_size = 15  # Starting size
-    max_size = 200  # Maximum size
-    start_pen = 2  # Starting pen size
-    max_pen = 25  # Maximum pen thickness
+    start_size = 15  
+    max_size = 200  
+    start_pen = 2  
+    max_pen = 25  
 
-    # Center the turtle and point it right (horizontal)
     t.penup()
-    t.goto(-start_size / 2, 0)  # Start slightly left of center
-    t.setheading(0)  # Point right
+    t.goto(-start_size / 2, 0)  
+    t.setheading(0)  
     t.pendown()
-
-    # Calculate growth per segment
     size_growth = (max_size - start_size) / total_segments
     pen_growth = (max_pen - start_pen) / total_segments
 
-    # Draw the spiral
     for segment in range(total_segments):
-        # Calculate current size and pen thickness
         current_size = start_size + (segment * size_growth)
         current_pen = start_pen + (segment * pen_growth)
-
-        # Set pen properties
         t.pensize(current_pen)
         t.pencolor(colors[color_index % len(colors)])
-
-        # Draw segment
         t.forward(current_size)
-
-        # Turn exactly 45 degrees for perfect octagon
         t.left(45)
 
-        # Update color
         color_index += 1
 
     screen.mainloop()

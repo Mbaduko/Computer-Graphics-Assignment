@@ -1,12 +1,11 @@
 import turtle
 import math
 
-# Set up the screen and turtle
 screen = turtle.Screen()
-screen.title('Star Fractal - PythonTurtle.Academy')
-screen.setup(800, 800)  # Set up a smaller screen size for better visibility
-screen.screensize(600, 600)  # Adjust the drawing area size to fit the fractal
-screen.tracer(0, 1)  # Set a small delay for visible drawing progress
+screen.title('Group 7')
+screen.setup(800, 800)  
+screen.screensize(600, 600)  
+screen.tracer(0, 1)  
 turtle.hideturtle()
 turtle.speed(0)
 
@@ -40,9 +39,8 @@ def star_fractal(x, y, length, penc, fillc, n):
                      y + math.sin((90 + i * 72) * math.pi / 180) * (length - length2),
                      length2, penc, fillc, n - 1)
 
-# Draw the star fractal with a smaller initial length to fit the screen
+
 star_fractal(0, 0, 300, 'blue', 'blue', 3)  # Reduced length to 300
 screen.update()
 
-# Keep the window open
 screen.mainloop()
